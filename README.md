@@ -1,30 +1,81 @@
-# React + TypeScript + Vite
+## How to work with starter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
+### 1. Clone current git repository via command
 
-Currently, two official plugins are available:
+```shell
+git clone https://github.com/skaziweb/react-ts-ui-kit-starter.git
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 2. Install all dependencies
 
-## Expanding the ESLint configuration
+```shell
+yarn install
+```
+```shell
+npm install
+```
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### 3. Create a new component in the folder, you can also add styles in this case as a module.
 
-- Configure the top-level `parserOptions` property like this:
+```text
+./src/components
+```
+#### See an examples in the source folder
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
+### 4. Add import and export of created component to the main library file
+
+```typescript
+import { Component } from "./Component/Component.tsx";
+
+export {
+    Component
 }
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### 5. Build your library
+
+```shell
+yarn build
+```
+```shell
+npm run build
+```
+
+### 6. Publish your library
+#### For update fix version use
+```shell
+yarn bump
+```
+```shell
+npm run bump
+```
+#### For update minor version use
+```shell
+yarn bump:minor
+```
+```shell
+npm run bump:minor
+```
+#### For update major version use
+```shell
+yarn bump:major
+```
+```shell
+npm run bump:major
+```
+
+#### If you want to work In simple way use git + http, this means you should remove the dist folder rule from .gitignore.
+#### Add all files to commit and push changes to your git repository
+
+```shell
+git push origin main
+```
+
+```shell
+git push origin master
+```
+
+### For hard way see the documentation for your git service
+[GitHub](https://docs.github.com/ru/packages)
+[GitLab](https://docs.gitlab.com/ee/user/packages/package_registry/)
