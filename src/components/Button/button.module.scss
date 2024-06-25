@@ -1,0 +1,24 @@
+.button {
+  display: flex;
+  max-width: fit-content;
+  padding: 16px 32px;
+  border-radius: 8px;
+  border: none;
+  text-transform: uppercase;
+  background-color: #213547;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.9;
+  }
+}
+
+.active {
+  opacity: 0.8;
+  background-color: #213547;
+  box-shadow: 0 0 4px 2px #295175;
+}
+
+.disabled {
+  background-color: #213547;
+}
